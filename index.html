@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reham Page</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            document.querySelectorAll("#script").forEach(function(option){
+                option.onclick=function(){
+                    document.querySelector("option").style.color=option.value();
+                }  
+               
+            });
+        });
+        </script>
 </head>
 
 <body>
@@ -15,11 +25,15 @@
             <a href="./tablehomework.html">table homework</a>
         </div>
         <div> 
-            <a href="./facebookhomework/">facebook homework</a>
+            <a href="./facebookhomework/"value>facebook homework</a>
         </div> 
         <div> 
             <a href="./marioclub/index.htmlb">marioclub</a>
         </div> 
-
+<script id="script">
+    <Option value="red"> Red </Option>
+    <Option value="green"> Green</Option>
+    <Option value="blue"> Blue</Option>
+    </script>
 </body>
 </html>
