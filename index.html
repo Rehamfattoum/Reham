@@ -6,34 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reham Page</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        document.addEventListener("DOMContentLoaded",function(){
-            document.querySelectorAll("#script").forEach(function(option){
-                option.onclick=function(){
-                    document.querySelector("option").style.color=option.value();
-                }  
-               
-            });
-        });
-        </script>
+   <script>
+       document.addEventListener("DOMContentLoaded",function(){
+           document.querySelector("#submit").onchange=function(){
+               let add ; 
+              document.getinsertAdjacentText("text")=add;
+            
+               }
+           }
+       })
+   </script>
+
 </head>
 
 <body>
     <div>
-        <h1> Reham Page </h1>
-        <div> 
-            <a href="./tablehomework.html">table homework</a>
-        </div>
-        <div> 
-            <a href="./facebookhomework/"value>facebook homework</a>
-        </div> 
-        <div> 
-            <a href="./marioclub/index.htmlb">marioclub</a>
-        </div> 
-<script id="script">
-    <Option value="red"> Red </Option>
-    <Option value="green"> Green</Option>
-    <Option value="blue"> Blue</Option>
-    </script>
+        <h1> TO DO List</h1>
+      <ul id="tasks"> </ul>
+
+        <form>
+            <input type="text" id="task" placeholder="New Task"/>
+            <input type="submit" value="Add" />
+
+        </form>
+
 </body>
 </html>
