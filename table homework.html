@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html> 
+    <head lang="en">
+        <title> table Homework</title>
+        <style> 
+        table{
+                border: 2px rgb(0, 183, 255) dashed;
+                 border-collapse: collapse ;
+                 text-align: center;   
+                 margin: 0px auto ; 
+                 width: 50%;
+                 height: 50%; 
+                 font-size:40px;
+            }
+            th,td {
+                border: 2px blue solid;
+            }
+    
+            .mark{
+                background-color: blue;
+            }
+         #ritastyle {
+             background-color: crimson;
+         }
+        </style>
+
+    </head>
+    <body> 
+        <table>
+            <thead>
+                <tr class="mark"> 
+                    <th> Name </th>
+                    <th> age </th>
+                    <th> tele </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Reham</td>
+                    <td>27 </td>
+                    <td> 123456</td>
+                </tr>
+                <tr id="ritastyle">
+                    <td  rowspan="2"> rita</td>
+                    <td rowspan="2" > 22</td>
+                    <td>654321</td>
+                </tr>
+                <tr>
+                    <td>987654</td> 
+                </tr>
+                <tr>
+                    <td>ali </td>
+                    <td> 23</td>
+                    <td>654789 </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
