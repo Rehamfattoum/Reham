@@ -5,5 +5,5 @@ div{
     text-align: center;
     display: inline block;
     border: 4px burlywood solid ;
-    
+    border-width: 2px;
 }
