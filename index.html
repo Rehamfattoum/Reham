@@ -7,28 +7,45 @@
     <title>Reham Page</title>
     <link rel="stylesheet" href="style.css">
    <script>
-       document.addEventListener("DOMContentLoaded",function(){
-           document.querySelector("#submit").onchange=function(){
-               let add ; 
-              document.getinsertAdjacentText("text")=add;
-            
-               }
-           }
-       })
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log("enter");
+            document.querySelector("form").onsubmit = function() {
+                let inputVal = document.querySelector("#text").value;
+                console.log(inputVal);
+                let textNode = document.createTextNode(inputVal);
+                console.log(textNode);
+                let li = document.createElement("li");
+                console.log(li);
+                let list = document.querySelector("#ullist");
+                console.log(list);
+
+                list.appendChild(li);
+                // console.log("reham1");
+                li.appendChild(textNode);
+                // console.log("reham2");
+                return false;
+            }
+            document.querySelector("select").onchange = function() {
+                document.querySelector("h2").style.color = this.value;
+            }
+        });
    </script>
 
 </head>
 
 <body>
-    <div>
-        <h1> TO DO List</h1>
-      <ul id="tasks"> </ul>
-
-        <form>
-            <input type="text" id="task" placeholder="New Task"/>
-            <input type="submit" value="Add" />
-
-        </form>
+    <h1>ToDo task</h1>
+    <ul id="ullist"></ul>
+    <form id="task">
+        <input type="text" placeholder="Enter your name" id="text">
+        <input type="submit" id="submit">
+    </form>
+    <hr>
+    <h2>Hello</h2>
+    <select id="select">
+    <option value="red">red</option>
+    <option value="green">green</option>
+    <option value="blue">blue</option>
 
 </body>
 </html>
