@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector("form").onsubmit = function () {
+            document.querySelector("form").onsubmit = function() {
                 let form = document.querySelector("form");
                 console.log("submit is done");
                 let height = document.querySelector("#height").value;
@@ -18,33 +18,27 @@
                 console.log(weight);
                 let compute = weight / ((height / 100) * (height / 100));
                 console.log(compute);
-                document.querySelector("h5").innerHTML = compute;
-                console.log(compute);
+                document.querySelector("h1").innerHTML = compute.toFixed(2);
                 console.log("finish");
-                form .append(compute);
-                console.log("append");
+                // form.append(compute);
+                console.log("recycle");
+
+
+                if (compute <= 18.5) {
+                    document.querySelector("h2").innerHTML = "Underweight";
+                    console.log("thin");
+                } else if (compute > 18.5 && compute < 24.9) {
+                    document.querySelector("h2").innerHTML = "Normal weight";
+                } else if (compute >= 25 && compute < 29.9) {
+                    document.querySelector("h2").innerHTML = "Overweight";
+                } else {
+                    document.querySelector("h2").innerHTML = "Obesity";
+                }
                 return false;
-                if (compute.value <= 18.5) {
-                document.querySelector("h3").innerHTML = "Underweight";
-                console.log("Underweight");
-            }
-            else if (compute.value = 18.5 && compute < 24.9) {
-                document.querySelector("h3").innerHTML = "Normal weight";
-                console.log("Normal weight");
-            }
-            else if (compute.value = 25 & compute < 29.9) {
-                document.querySelector("h3").innerHTML = "Overweight";
-                console.log("Overweight");
-            }
-            else if (compute.value >= 30) {
-                document.querySelector("h3").innerHTML = "Obesity";
-                console.log("Obesity");
-            }
-            return false;
             }
 
-           
-        })
+
+        });
     </script>
 
 </head>
@@ -53,14 +47,13 @@
     <div class="container">
         <form>
             <label>Your Height in cm :</label>
-            <input type="text" id="height" placeholder="please enter your height"><br><br>
+            <input type="text" id="height"><br><br>
             <label>Your Weight :</label>
-            <input type="text" id="weight" placeholder="please enter your weight in cm"><br><br>
+            <input type="text" id="weight"><br><br>
             <hr>
-            <input type="submit" id="calc" value="calc">
-            <h5></h5>
-            <h3></h3>
-
+            <input type="submit" id="compute" value="compute BMI"><br>
+            <h1></h1>
+            <h2></h2>
         </form>
     </div>
 </body>
