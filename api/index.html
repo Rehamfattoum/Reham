@@ -7,19 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascriptapi</title>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            fetch("https://api.exchangerate.host/latest").then((response) => 
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     fetch("https://api.exchangerate.host/latest").then((response) =>
+        //         response.json()).then((data) => {
+        //         console.log(data.rates.AED);
+        //         document.querySelector("h1").innerHTML = `1 EUR Equals ${data.rates.AED.toFixed(2)}`;
+        //         console.log(data);
+        //     })
+        // })
+
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("./medicine.json").then((response) =>
                 response.json()).then((data) => {
-                    console.log(data.rates.AED);
-                    document.querySelector("h1").innerHTML = `1 EUR Equals ${data.rates.AED.toFixed(2)}`
+                console.log(data[name]);
+                for (let i = 0; i <= data.length; i++) {
+                    let row = document.querySelector("#row").innerHTML = '<tr><td>' + data[i].name + '<td>' + data[i].Titer + '<td>' + data[i].Form + '<td>' + data[i].Price;
+                    document.querySelector("table").append(row);
                 }
-                )
-            })
+            });
+        });
     </script>
 </head>
 
 <body>
-    <h1> </h1>
+    <a href="./medicine.json"></a>
+    <!-- <h1> </h1> -->
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Titer</th>
+                <th>Form</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="row">
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
 
 </html>

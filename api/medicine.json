@@ -1,0 +1,24 @@
+{
+    "data": [{
+            "name": "PARACETAMOL",
+            "TITER": ".MG/5 ML 120",
+            "FORM": "شراب",
+            "PRICE": "800"
+        },
+
+        {
+            "name": "COLCHICINE",
+            "TITER": ".MG/TAB 0.5",
+            "FORM": "أقراص",
+            "PRICE": "750"
+        },
+        {
+            "name": "IBUPROFEN",
+            "TITER": ".MG/SUOO 500",
+            "FORM": "تحاميل",
+            "PRICE": "550"
+
+        }
+
+    ]
+}
