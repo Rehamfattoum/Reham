@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector("form").onsubmit = function() {
+            document.querySelector("form").onsubmit = function () {
                 let form = document.querySelector("form");
                 console.log("submit is done");
                 let height = document.querySelector("#height").value;
@@ -19,14 +19,28 @@
                 let compute = weight / ((height / 100) * (height / 100));
                 console.log(compute);
                 document.querySelector("#bmi").innerHTML = compute;
+                console.log(compute);
                 console.log("finish");
                 form.append(compute);
-                console.log("ali");
+                console.log("append");
                 return false;
             }
-            return false;
+
             if (compute < 18.5) {
-                // document.querySelector("#compute").innerHTML = "Underweight";
+                document.querySelector("#bmitext").innerHTML = "Underweight";
+                console.log("Underweight");
+            }
+            else if (compute > 18.5 & compute < 24.9) {
+                document.querySelector("#bmitext").innerHTML = "Normal weight";
+                console.log("Normal weight");
+            }
+            else if (compute > 25 & compute < 29.9) {
+                document.querySelector("#bmitext").innerHTML = "Overweight";
+                console.log("Overweight");
+            }
+            else if (compute > 30) {
+                document.querySelector("#bmitext").innerHTML = "Obesity";
+                console.log("Obesity");
             }
         })
     </script>
@@ -37,12 +51,14 @@
     <div class="container">
         <form>
             <label>Your Height in cm :</label>
-            <input type="text" id="height"><br><br>
+            <input type="text" id="height" placeholder="please enter your height"><br><br>
             <label>Your Weight :</label>
-            <input type="text" id="weight"><br><br>
+            <input type="text" id="weight" placeholder="please enter your weight in cm"><br><br>
             <hr>
             <input type="submit" id="compute" value="compute BMI">
             <input type="text" id="bmi">
+            <input type="text" id="bmitext" placeholder="wait your result">
+
         </form>
     </div>
 </body>

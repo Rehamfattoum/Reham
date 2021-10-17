@@ -4,12 +4,25 @@ body {
 }
 
 
-/* .container {}
+.container {
+    margin: 0% auto;
+    width: 300px;
+    padding: 23px;
+    border: 2px solid black;
+    border-radius: 39px;
+    height: 300px;
+    background-color: azure;
+}
 
-form {}
+form input {
+    display: block;
+    height: 24px;
+    width: 219px;
+    margin: 3px
+}
 
 .formtext {}
 
 form button {}
 
-hr {} */
+hr {}
