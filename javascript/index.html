@@ -18,30 +18,32 @@
                 console.log(weight);
                 let compute = weight / ((height / 100) * (height / 100));
                 console.log(compute);
-                document.querySelector("#bmi").innerHTML = compute;
+                document.querySelector("h5").innerHTML = compute;
                 console.log(compute);
                 console.log("finish");
-                form.append(compute);
+                form .append(compute);
                 console.log("append");
                 return false;
-            }
-
-            if (compute < 18.5) {
-                document.querySelector("#bmitext").innerHTML = "Underweight";
+                if (compute.value <= 18.5) {
+                document.querySelector("h3").innerHTML = "Underweight";
                 console.log("Underweight");
             }
-            else if (compute > 18.5 & compute < 24.9) {
-                document.querySelector("#bmitext").innerHTML = "Normal weight";
+            else if (compute.value = 18.5 && compute < 24.9) {
+                document.querySelector("h3").innerHTML = "Normal weight";
                 console.log("Normal weight");
             }
-            else if (compute > 25 & compute < 29.9) {
-                document.querySelector("#bmitext").innerHTML = "Overweight";
+            else if (compute.value = 25 & compute < 29.9) {
+                document.querySelector("h3").innerHTML = "Overweight";
                 console.log("Overweight");
             }
-            else if (compute > 30) {
-                document.querySelector("#bmitext").innerHTML = "Obesity";
+            else if (compute.value >= 30) {
+                document.querySelector("h3").innerHTML = "Obesity";
                 console.log("Obesity");
             }
+            return false;
+            }
+
+           
         })
     </script>
 
@@ -55,9 +57,9 @@
             <label>Your Weight :</label>
             <input type="text" id="weight" placeholder="please enter your weight in cm"><br><br>
             <hr>
-            <input type="submit" id="compute" value="compute BMI">
-            <input type="text" id="bmi">
-            <input type="text" id="bmitext" placeholder="wait your result">
+            <input type="submit" id="calc" value="calc">
+            <h5></h5>
+            <h3></h3>
 
         </form>
     </div>
