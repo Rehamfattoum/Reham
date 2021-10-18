@@ -26,6 +26,8 @@
 
                 if (compute <= 18.5) {
                     document.querySelector("h2").innerHTML = "Underweight";
+                    // img.setAttribute("src", "under.png");
+                    // document.querySelector("#image").appendChild(img);
                     console.log("thin");
                 } else if (compute > 18.5 && compute < 24.9) {
                     document.querySelector("h2").innerHTML = "Normal weight";
@@ -55,6 +57,9 @@
             <h1></h1>
             <h2></h2>
         </form>
+        <div id="image">
+            <!-- <img src="/github/Rita/photo/normal.png" alt="normal"> -->
+        </div>
     </div>
 </body>
 
