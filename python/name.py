@@ -24,6 +24,18 @@
 # def BMI ():
 height=int(input("enter your height in cm please "))
 weight=int(input("enter your weight in cm please "))
+import datetime
+age=datetime.datetime.now()
+birth=int(input("please enter your birthday"))
+print((f"your age is:{age.year-birth}") )
 bmi=int()
 bmi=weight/((height/100)*(height/100))
-print(round(bmi,2))
+print(f"Your BMI is {round(bmi,2)}")
+if bmi<18.5:
+    print("Underweight")
+elif bmi>=18.5 and bmi<24.9:
+    print("Normal weight")
+elif bmi >=25 and bmi <29.9:
+    print("Overweight")
+else:
+    print("Obesity")
